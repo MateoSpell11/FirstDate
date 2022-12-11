@@ -6,8 +6,8 @@ const documentReady = () => {
   const heroButtonNo = document.querySelector('#heroButtonNo');
 
   const nowZomosNobios = () => {
-    alert('💞 Now zomos ParTnEr 💞');
-    alert('😱Nuestra VoDa Is MañaNa😱');
+    alert('💞 lo sabía 💞');
+    alert('😱Lugar, fecha y hora para ir por ti😱');
     location.href = 'https://www.youtube.com/shorts/A8_AuLDBmKc';
   };
 
@@ -17,7 +17,7 @@ const documentReady = () => {
     heroButtonNo.style.left = (Math.random() * window.innerWidth) + 'px';
   };
 
-  const partner = prompt('🥰 aaaa 🥰');
+  const partner = prompt('🥰 Nombre 🥰');
   heroTitle.innerHTML += partner + ' ❤';
 
   heroButtonSi.addEventListener('click', nowZomosNobios);
