@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<div id="app">Please wait...</div>
+<html lang="en">
+<!-- index.html -->
+
+<div data-app id="main">Please wait...</div>
+
+
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>First Date</title>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="shortcut icon"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_corazón.svg/1200px-Heart_corazón.svg.png"
-    type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.12.2/lib/themes/vue.css">
 </head>
+<script>
+  window.$docsify = {
+    el: '#main',
+  };
+</script>
+<script>
+  window.$docsify = {
+    loadSidebar: true
+  }
+</script>
 
-<body class="body">
-  <article class="hero">
-    <h1 class="hero__title">❤ ¿Quieres salir conmigo? </h1>
-    <figure class="hero__image-container">
-      <img
-        src="https://1.bp.blogspot.com/-qsvCBLdgYj8/XCLjZK9_RMI/AAAAAAAABBA/BsQ7kYtn9qkPkQ3VhF8g_1Er73bGs7KGQCLcBGAs/w1200-h630-p-k-no-nu/srewk.jpg"
-        alt="Imagen del amor" class="hero__image" />
-    </figure>
-    <button id="heroButtonSi" class="hero__button">🌚Si soy🌚</button>
-    <button id="heroButtonNo" class="hero__button">😭Nel Perro😭</button>
-  </article>
-
-  <script src="./js/index.js" type="module"></script>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'First Date',
+      repo: 'FirstDate'
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4.12.2"></script>
 </body>
 
 </html>
