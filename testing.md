@@ -15,5 +15,5 @@ route:
         order: 100,
         description: 'Change SF credentials into AWS and env variables.',
       },
-method: POST
+
       
