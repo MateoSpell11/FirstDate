@@ -26,7 +26,6 @@ Auth true
       }
     }
 ```
-
 ## POST /Change Credentials
 >Admin method true
 >Auth true 
