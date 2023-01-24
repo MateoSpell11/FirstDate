@@ -13,51 +13,41 @@
   </a>
 </p>
 
-## Change Credentials
-> Routes. 
-<p> 
-  
-</p>
->   
-
-## Installation
-
-Install `docsify-cli` via `npm` or `yarn` globally.
-
+## GET /Change Credentials
+>Admin method true
+>Auth true 
+### response
 ```shell
-npm i docsify-cli -g
-# yarn global add docsify-cli
+    {
+      "status": "success",
+      "data": {
+      }
+    }
 ```
 
-## Usage
-
-### `init` command
-
-Use `init` to generate your docs.
-
+## GET /Clear-Cache
+>Admin method true
+>Auth true 
+### response
 ```shell
-docsify init <path> [--local false] [--theme vue] [--plugins false]
-
-# docsify i <path> [-l false] [-t vue] [--plugins false]
+    {
+      "status": "success",
+      "data": {
+      }
+    }
 ```
+## GET /Clear-Cache
 
-`<path>` defaults to the current directory. Use relative paths like `./docs` (or `docs`).
-
-- `--local` option:
-  - Shorthand: `-l`
-  - Type: boolean
-  - Default: `false`
-  - Description: Copy `docsify` files to the docs path, defaults to `false` using `cdn.jsdelivr.net` as the content delivery network (CDN). To explicitly set this option to `false` use `--no-local`.
-- `--theme` option:
-  - Shorthand: `-t`
-  - Type: string
-  - Default: `vue`
-  - Description: Choose a theme, defaults to `vue`, other choices are `buble`, `dark` and `pure`.
-- `--plugins` option:
-  - Shorthand: `-p`
-  - Type: boolean
-  - Default: `false`
-  - Description: Provide a list of plugins to insert as `<script>` tags to `index.html`.
+>Admin method true
+>Auth true 
+### response
+```shell
+    {
+      "status": "success",
+      "data": {
+      }
+    }
+```
 
 ### `serve` command
 
