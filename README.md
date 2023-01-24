@@ -13,7 +13,7 @@
   </a>
 </p>
 
-## GET /Change Credentials
+## POST /Change Credentials
 >Admin method true
 >Auth true 
 ### response
@@ -28,7 +28,13 @@
 ## GET /Clear-Cache
 >Admin method true
 >Auth true 
-### response
+### Body
+```shell
+    {
+    "userEmail": "logan1@corporatealliance.net.sbx1"
+    }
+```
+### Response
 ```shell
     {
       "status": "success",
@@ -36,6 +42,7 @@
       }
     }
 ```
+
 ## GET /Clear-Cache
 
 >Admin method true
