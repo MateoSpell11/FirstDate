@@ -3,7 +3,6 @@
   </a>
 </p>
 
-
 <p align="center">
     DOCUMENTATION
 </p>
@@ -14,10 +13,10 @@
 </p>
 
 ## Get /Clear Cache
-<p>
-Admin method true
-Auth true 
-</p>
+
+>Admin method true
+>Auth true 
+
 ### response
 ```shell
     {
