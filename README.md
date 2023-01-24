@@ -14,8 +14,10 @@
 </p>
 
 ## POST /Change Credentials
->Admin method true
->Auth true 
+<p>
+Admin method true
+Auth true 
+</p>
 ### response
 ```shell
     {
