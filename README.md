@@ -13,24 +13,6 @@
 </p>
 
 
-## POST /Change Credentials
->Admin method true
->Auth true 
-### Body
-```shell
-    {
-    "userEmail": "logan1@corporatealliance.net.sbx1"
-    }
-```
-### Response
-```shell
-    {
-      "status": "success",
-      "data": {
-      }
-    }
-```
-
 ## GET /clear-cache
 > Admin auth: true
 > Auth: true
@@ -88,6 +70,23 @@
   "data":{
   }
 }
+```
+## POST /Change Credentials
+>Admin method true
+>Auth true 
+### Body
+```shell
+    {
+    "userEmail": "logan1@corporatealliance.net.sbx1"
+    }
+```
+### Response
+```shell
+    {
+      "status": "success",
+      "data": {
+      }
+    }
 ```
 ## POST /sfdc/sync/activate
 > Admin auth: true
