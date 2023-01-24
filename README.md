@@ -56,46 +56,148 @@
     }
 ```
 
-### `serve` command
-
-Run a server on `localhost` with livereload.
-
+## GET /clear-cache
+> Admin auth: true
+> Auth: true
+### Response 
 ```shell
-docsify serve <path> [--open false] [--port 3000]
-
-# docsify s <path> [-o false] [-p 3000]
+{"status":"success","data":{}}
 ```
-
-- `--open` option:
-  - Shorthand: `-o`
-  - Type: boolean
-  - Default: `false`
-  - Description: Open the docs in the default browser, defaults to `false`. To explicitly set this option to `false` use `--no-open`.
-- `--port` option:
-  - Shorthand: `-p`
-  - Type: number
-  - Default: `3000`
-  - Description: Choose a listen port, defaults to `3000`.
-
-### `generate` command
-
-Docsify's generators.
-
+## GET /testConnection
+> Admin auth: true
+> Auth: true
+### Response 
 ```shell
-docsify generate <path> [--sidebar _sidebar.md]
-
-# docsify g <path> [-s _sidebar.md]
+{"status":"success","data":{"status":"SUCCESS OR FAILURE"}}
 ```
-
-- `--sidebar` option:
-  - Shorthand: `-s`
-  - Type: string
-  - Default: `_sidebar.md`
-  - Description: Generate sidebar file, defaults to `_sidebar.md`.
-
-## Contributing
-Please see the [Contributing Guidelines](./CONTRIBUTING.md)
-
-## Contribution
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/docsifyjs/docsify-cli)
+## GET /sfdc/sync/roles
+> Admin auth: true
+> Auth: true
+### Response 
+```shell
+{"status":"success","data":{"result":"success"}}
+```
+## GET /sfdc/sync/profiles
+> Admin auth: true
+> Auth: true
+### Response 
+```shell
+{"status":"success","data":{"result":"success"}}
+```
+## GET /sfdc/sync/objects
+> Admin auth: true
+> Auth: true
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /sfdc/sync/activate
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{"records":[{"Describe__c":"optional","LastModifiedDate__c":"optional","key__c":"required","IsActive__c":false}]}
+```
+### Response 
+```shell
+{"status":"success","data":{"describes":[{}]}}
+```
+## POST /sfdc/sync/ingest-token
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{"url":"required:: https://ingest.trackland.com"}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /sfdc/sync/credential
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{"records":[[{"tlnd__AuthType__c":"required","tlnd__URL__c":"required","tlnd__Token__c":"required","tlnd__Active__c":false,"DevelperName":"required","MasterLabel":"required"}]]}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /sfdc/sync/start-sync
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /sfdc/sync/records
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{"objectType":"required"}
+```
+### Response 
+```shell
+{"status":"success","data":{"TLItem":{}}}
+```
+## POST /sfdc/sync/changeCredentials
+> Admin auth: true
+> Auth: true
+### Body 
+```shell
+{"userEmail":"required"}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /api/items/post
+> Admin auth: false
+> Auth: true
+### Body 
+```shell
+{"query":{"type":["required"],"items":[{"atributtes":{"type":"required"}}]}}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /api/items/post
+> Admin auth: false
+> Auth: true
+### Body 
+```shell
+{"query":{"type":["required:: @user"],"items":[{"email":"required","password":"optional","phone":"optional","name":"optional","profile":"required","sfUser":"optional","atributtes":{"type":"required:: @user"}}]}}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /api/items/put
+> Admin auth: false
+> Auth: true
+### Body 
+```shell
+{"query":{"type":["required"],"items":[{"itemId":"required","atributtes":{"type":"required"}}]}}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
+## POST /api/items/put
+> Admin auth: false
+> Auth: true
+### Body 
+```shell
+{"query":{"type":["required:: @user"],"items":[{"itemId":"required","email":"optional","password":"optional","phone":"optional","name":"optional","profile":"optional","sfUser":"optional","atributtes":{"type":"@user"}}]}}
+```
+### Response 
+```shell
+{"status":"success","data":{}}
+```
