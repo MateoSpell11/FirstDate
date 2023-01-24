@@ -13,7 +13,7 @@
   </a>
 </p>
 
-## POST /Change Credentials
+## Get /Clear Cache
 <p>
 Admin method true
 Auth true 
@@ -27,7 +27,7 @@ Auth true
     }
 ```
 
-## GET /Clear-Cache
+## POST /Change Credentials
 >Admin method true
 >Auth true 
 ### Body
